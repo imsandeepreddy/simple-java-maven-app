@@ -9,11 +9,4 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
-    steps:
-    - uses: imsandeepreddy/WorkflowsRepo/.github/workflows/maven.yml@main
+    uses: imsandeepreddy/WorkflowsRepo/.github/workflows/maven.yml@main
