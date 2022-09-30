@@ -16,4 +16,4 @@ jobs:
       packages: write
 
     steps:
-    - uses: imsandeepreddy/WorkflowsRepo/.github/workflows/maven.yml
+    - uses: imsandeepreddy/WorkflowsRepo/.github/workflows/maven.yml@main
