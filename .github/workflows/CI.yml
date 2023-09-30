@@ -9,4 +9,4 @@ on:
 
 jobs:
   build:
-    uses: imsandeepreddy/Actions-Template/.github/workflows/main.yml@main
+    uses: imsandeepreddy/Actions-Template/action.yml@main
