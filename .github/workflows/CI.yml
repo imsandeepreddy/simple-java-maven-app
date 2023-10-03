@@ -17,4 +17,4 @@ jobs:
 
       # Uses the Composite Action
       - name: Build and Push the image
-        uses: imsandeepreddy/Actions-Template@main
+        uses: imsandeepreddy/Actions-Template@test
