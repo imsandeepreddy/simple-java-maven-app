@@ -17,16 +17,14 @@ jobs:
           # Read the build-tool value from your YAML file
           build_tool=$(cat ./pipelineconfig.yml | yq e '.buildTool')
           #echo "::set-output name=build_tool::$build_tool"
-          echo "{build_tool}=${build_tool}" >> $GITHUB_OUTPUT
+          echo "{build_tool}=${build_tool}" >> $GITHUB_ENV
           echo $build_tool
         shell: bash
         env:
           path: ${{ github.workspace }}
-      - name: test
-        run: echo "${{ steps.read-yaml.outputs.build_tool }}"
 
       # Uses the Composite Action
       - name: Build and Push the image
         uses: imsandeepreddy/Actions-Template@test2
-        with:
+        env:
           build-tool: ${{ steps.read-yaml.outputs.build_tool }}
