@@ -15,7 +15,8 @@ jobs:
         id: read-yaml
         run: |
           build_tool=$(cat ./pipelineconfig.yml | yq e '.buildTool')
-          echo "{build_tool}=${echo $build_tool}" >> $GITHUB_OUTPUT
+          echo "build_tool=$(echo $build_tool)" >> $GITHUB_OUTPUT
+          #echo "{build_tool}=${echo $build_tool}" >> $GITHUB_OUTPUT
           echo $build_tool
         shell: bash
         env:
