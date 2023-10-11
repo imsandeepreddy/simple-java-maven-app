@@ -15,13 +15,13 @@ jobs:
         id: read-yaml
         run: |
           # Read the build-tool value from your YAML file
-          build-tool=$(cat ./pipelineconfig.yml | yq e '.buildTool')
-          #echo "::set-output name=build-tool::$build-tool"
-          echo "{build-tool}=${build-tool}" >> $GITHUB_ENV
-          echo $build-tool
+          build_tool=$(cat ./pipelineconfig.yml | yq e '.buildTool')
+          echo "build_tool=${build_tool}" >> $GITHUB_ENV
+          echo $build_tool
         shell: bash
         env:
           path: ${{ github.workspace }}
+
 
       # Uses the Composite Action
       - name: Build and Push the image
