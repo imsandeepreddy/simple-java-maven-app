@@ -27,5 +27,5 @@ jobs:
     steps:
       - name: Build and Push the image
         uses: imsandeepreddy/Actions-Template@test2
-        env:
+        with:
           build_tool: ${{ steps.read-yaml.outputs.build_tool }}
