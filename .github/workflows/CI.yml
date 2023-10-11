@@ -14,9 +14,9 @@ jobs:
       - name: Read build-tool from YAML file
         id: read-yaml
         run: |
-          build_tool=$(cat ./pipelineconfig.yml | yq e '.buildTool')
-          export build_tool
-          echo $build_tool
+          build-tool=$(cat ./pipelineconfig.yml | yq e '.buildTool')
+          export build-tool
+          echo $build-tool
         shell: bash
         env:
           path: ${{ github.workspace }}
@@ -28,4 +28,4 @@ jobs:
       - name: Build and Push the image
         uses: imsandeepreddy/Actions-Template@test2
         env:
-          build_tool: ${{ steps.read-yaml.outputs.build_tool }}
+          build_tool: ${{ steps.read-yaml.outputs.build-tool }}
