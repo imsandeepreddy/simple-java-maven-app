@@ -23,7 +23,7 @@ jobs:
         env:
           path: ${{ github.workspace }}
       - name: test
-        run: echo ${{ steps.read-yaml.outputs.build_tool }}
+        run: echo "${{ steps.read-yaml.outputs.build_tool }}"
 
       # Uses the Composite Action
       - name: Build and Push the image
