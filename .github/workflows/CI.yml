@@ -16,7 +16,8 @@ jobs:
         run: |
           # Read the build-tool value from your YAML file
           build_tool=$(cat ./pipelineconfig.yml | yq e '.build_tool')
-          echo "::set-output name=build_tool::$build_tool"
+          #echo "::set-output name=build_tool::$build_tool"
+          echo "{build_tool}=${build_tool}" >> $GITHUB_OUTPUT
         shell: bash
         env:
           path: ${{ github.workspace }}
