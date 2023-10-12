@@ -1,4 +1,4 @@
-name: Use the Composite Action with Actions
+name: CI
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     branches: ['test2']
 
 jobs:
-  build:
+  CI:
     runs-on: ubuntu-latest
 
     steps:
