@@ -21,11 +21,6 @@ jobs:
         shell: bash
         env:
           path: ${{ github.workspace }}
-
-  other-job:
-    runs-on: ubuntu-latest
-
-    steps:
       - name: test
         run: echo ${{ steps.read-yaml.outputs.build_tool }}
       - name: Build and Push the image
