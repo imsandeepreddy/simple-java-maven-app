@@ -19,10 +19,6 @@ jobs:
           #echo "{build_tool}=${echo $build_tool}" >> $GITHUB_OUTPUT
           echo $build_tool
         shell: bash
-        env:
-          path: ${{ github.workspace }}
-      - name: test
-        run: echo ${{ steps.read-yaml.outputs.build_tool }}
       - name: Build and Push the image
         uses: imsandeepreddy/Actions-Template@test2
         with:
