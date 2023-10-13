@@ -3,7 +3,7 @@ name: CI
 on:
   workflow_dispatch:
   push:
-    branches: ['test2']
+    branches: ['test3']
 
 jobs:
   CI:
@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Build
-        uses: imsandeepreddy/Actions-Template@test2
+        uses: imsandeepreddy/Actions-Template/.github/workflows/main.yml@test3
