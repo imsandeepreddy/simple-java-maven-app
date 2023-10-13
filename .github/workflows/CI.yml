@@ -7,8 +7,5 @@ on:
 
 jobs:
   CI:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Build
-        uses: imsandeepreddy/Actions-Template/.github/workflows/main.yml@test3
+    #runs-on: ubuntu-latest
+    uses: imsandeepreddy/Actions-Template/.github/workflows/main.yml@test3
