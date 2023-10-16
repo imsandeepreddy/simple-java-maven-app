@@ -1,4 +1,4 @@
-name: CI
+name: CICD
 
 on:
   workflow_dispatch:
@@ -6,6 +6,6 @@ on:
     branches: ['test3']
 
 jobs:
-  CI:
+  CICD:
     #runs-on: ubuntu-latest
     uses: imsandeepreddy/Actions-Template/.github/workflows/main.yml@test3
