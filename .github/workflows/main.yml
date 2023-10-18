@@ -3,7 +3,7 @@ name: CICD
 on:
   workflow_dispatch:
   push:
-    branches: ['test3']
+    branches: ['test4']
 
 jobs:
   CICD:
